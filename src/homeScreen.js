@@ -29,6 +29,7 @@ const HomeScreen = () => {
       <View style={{marginBottom: 20}}>
       <Button title="Abrir Câmera" onPress={handleCam} color="blue" />
       </View>
+      
       <View>
         <Button
         title={stateLED.value ? "Desligar LED" : "Ligar LED"}
@@ -36,6 +37,15 @@ const HomeScreen = () => {
         color={stateLED.value ? "red" : "green"}
         />
       </View>
+
+      <View style={{marginBottom: 20}}>
+        <Button
+          title="Listar Evento"
+          onPress={()=> navigation.navigate("Eventos")}
+        />
+
+      </View>
+      
     </View>
   );
 };
